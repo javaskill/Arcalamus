@@ -3,14 +3,14 @@ package com.arcalamus.window;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import com.arcalamus.event.Events;
-import com.arcalamus.event.events.KeyboardPressEvent;
+import com.arcalamus.control.KeyboardPressEvent;
+import com.arcalamus.util.event.EventManager;
 
 public class Keyboard implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent arg0) {
-		Events.get().dispatchEvent(new KeyboardPressEvent(arg0.getKeyCode()));
+		EventManager.get().dispatchEvent(new KeyboardPressEvent(arg0.getKeyCode()));
 	}
 
 	@Override
