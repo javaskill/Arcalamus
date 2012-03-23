@@ -2,6 +2,7 @@ package com.arcalamus.model.entity.equipment;
 
 import com.arcalamus.model.item.Item;
 import com.arcalamus.util.definition.Definition;
+import com.arcalamus.util.strings.StringUtils;
 
 public class Equipment extends Item {
 
@@ -10,7 +11,7 @@ public class Equipment extends Item {
 	}
 
 	public int requiredLevel() {
-		return getDefinition().toInteger(getDefinition().getProperty("required-level"));
+		return StringUtils.toInteger(getDefinition().getProperty("required-level"));
 	}
 
 }

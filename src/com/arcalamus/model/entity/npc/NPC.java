@@ -6,6 +6,8 @@ import com.arcalamus.model.entity.Entity;
 import com.arcalamus.model.map.Position;
 import com.arcalamus.util.definition.Definition;
 
+import static com.arcalamus.util.strings.StringUtils.toBoolean;
+
 public class NPC extends Entity {
 
 	public NPC(Definition definition, Position position) {
@@ -13,11 +15,11 @@ public class NPC extends Entity {
 	}
 
 	public boolean isAggressive() {
-		return getDefinition().toBoolean(getDefinition().getProperty("aggressive"));
+		return toBoolean(getDefinition().getProperty("aggressive"));
 	}
 
 	public boolean isAttackable() {
-		return getDefinition().toBoolean(getDefinition().getProperty("attackable"));
+		return toBoolean(getDefinition().getProperty("attackable"));
 	}
 
 	@Override

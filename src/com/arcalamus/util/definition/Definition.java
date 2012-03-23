@@ -3,9 +3,7 @@ package com.arcalamus.util.definition;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.arcalamus.util.strings.StringConverter;
-
-public class Definition extends StringConverter {
+public class Definition {
 
 	private final Map<String, String> properties = new HashMap<String, String>();
 
